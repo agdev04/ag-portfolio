@@ -1,0 +1,6 @@
+# Allow all web crawlers (default)
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://agnieve.dev/sitemap.xml
