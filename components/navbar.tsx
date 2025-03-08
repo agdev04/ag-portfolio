@@ -41,7 +41,6 @@ export default function Navbar() {
                 height={65}
                 priority
                 className="object-contain"
-                placeholder="blur"
               />
             </Link>
           </div>
