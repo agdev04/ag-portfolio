@@ -9,7 +9,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg mb-4">
-              Hello! I'm <span className="highlight">AG Nieve</span>, a passionate Full Stack Developer with 7 years of
+              Hello! I'm <span className="highlight font-medium">AG Nieve</span>, a passionate Full Stack Developer with 7 years of
               experience building web applications and services. I specialize in PHP, JavaScript, Rust, and Go, creating
               efficient, scalable, and maintainable solutions for complex problems.
             </p>

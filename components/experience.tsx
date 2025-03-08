@@ -31,28 +31,50 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-secondary/30">
+    <section 
+      id="experience" 
+      className="py-20 bg-secondary/30"
+      itemScope 
+      itemType="https://schema.org/Organization"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-heading">Professional Experience</h2>
-
-        <div className="max-w-3xl">
+        <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 pb-10">
-              {/* Timeline dot */}
-              <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-primary bg-background"></div>
+            <div 
+              key={index} 
+              className="relative pl-8 pb-12 group"
+              itemProp="employee"
+              itemScope 
+              itemType="https://schema.org/EmployeeRole"
+            >
+              {/* Timeline dot with animation */}
+              <div className="absolute left-0 top-2 h-4 w-4 rounded-full border-2 border-primary bg-background transition-transform duration-300 group-hover:scale-125 group-hover:border-primary/80"></div>
 
-              {/* Timeline line */}
+              {/* Timeline line with gradient */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-[7px] top-6 h-full w-[2px] bg-border"></div>
+                <div className="absolute left-[7px] top-6 h-full w-[2px] bg-gradient-to-b from-primary/50 to-border"></div>
               )}
 
-              <h3 className="text-xl font-bold">{exp.title}</h3>
-              <div className="flex items-center text-sm text-muted-foreground mb-2">
-                <span>{exp.company}</span>
-                <span className="mx-2">•</span>
-                <span>{exp.period}</span>
+              <div className="transform transition-all duration-300 hover:translate-x-1">
+                <h3 
+                  className="text-2xl font-bold text-foreground/90"
+                  itemProp="roleName"
+                >
+                  {exp.title}
+                </h3>
+                <div className="flex items-center text-sm text-muted-foreground mt-1 mb-3">
+                  <span itemProp="employerName">{exp.company}</span>
+                  <span className="mx-2 text-primary">•</span>
+                  <span itemProp="dateOccupied">{exp.period}</span>
+                </div>
+                <p 
+                  className="leading-relaxed text-muted-foreground/90 text-[15px]"
+                  itemProp="description"
+                >
+                  {exp.description}
+                </p>
               </div>
-              <p className="leading-loose">{exp.description}</p>
             </div>
           ))}
         </div>

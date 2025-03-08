@@ -1,6 +1,10 @@
+"use client"
+
+import { Metadata } from "next"
 import { ArrowDown } from "lucide-react"
 import Link from "next/link"
-import { Metadata } from "next"
+import { useTypingEffect } from "@/hooks/use-typing-effect"
+
 
 export const metadata: Metadata = {
   title: "AG Nieve - Full Stack Developer Portfolio | Home",
@@ -8,6 +12,12 @@ export const metadata: Metadata = {
 }
 
 export default function Hero() {
+  const { displayedText } = useTypingEffect({
+    text: "Full Stack Developer",
+    typingSpeed: 150,
+    delayBeforeStart: 500,
+  })
+
   return (
     <section 
       id="home" 
@@ -22,7 +32,10 @@ export default function Hero() {
             itemType="https://schema.org/Person"
           >
             <span className="block">Hi, I'm <span itemProp="name">AG Nieve</span></span>
-            <span className="block mt-2 text-primary" itemProp="jobTitle">Full Stack Developer</span>
+            <span className="block mt-2 text-primary" itemProp="jobTitle">
+              {displayedText}
+              <span className="animate-blink">|</span>
+            </span>
           </h1>
           <p 
             className="mt-6 max-w-lg mx-auto text-lg text-muted-foreground"

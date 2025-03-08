@@ -82,7 +82,9 @@
   line-height: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .section-heading::after {
@@ -92,6 +94,9 @@
   width: 3rem;
   background-color: hsl(var(--primary));
   margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .project-card:hover .project-overlay {
