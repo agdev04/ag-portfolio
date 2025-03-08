@@ -2,30 +2,20 @@
 
 import type React from "react"
 
-import { useEffect, useState } from "react"
+import { useState, useRef } from "react"
+import ReCAPTCHA from "react-google-recaptcha"
 import { Github, Linkedin, Mail, Send } from "lucide-react"
 import Link from "next/link"
 
 export default function Contact() {
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    captcha: ""
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null)
-  const [captchaQuestion, setCaptchaQuestion] = useState({ question: "", answer: "" })
-
-  useEffect(() => {
-    setCaptchaQuestion(generateCaptcha())
-  }, [])
-
-  function generateCaptcha() {
-    const num1 = Math.floor(Math.random() * 10)
-    const num2 = Math.floor(Math.random() * 10)
-    return { question: `${num1} + ${num2} = ?`, answer: (num1 + num2).toString() }
-  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -37,8 +27,9 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
-      if (formData.captcha !== captchaQuestion.answer) {
-        throw new Error('Incorrect captcha answer')
+      const token = await recaptchaRef.current?.executeAsync()
+      if (!token) {
+        throw new Error('reCAPTCHA verification failed')
       }
 
       const response = await fetch('/api/contact', {
@@ -46,7 +37,7 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken: token }),
       })
 
       if (!response.ok) {
@@ -54,14 +45,13 @@ export default function Contact() {
       }
 
       setSubmitStatus("success")
-      setFormData({ name: "", email: "", message: "", captcha: "" })
-      setCaptchaQuestion(generateCaptcha())
+      setFormData({ name: "", email: "", message: "" })
     } catch (error) {
       console.error('Error sending message:', error)
       setSubmitStatus("error")
-      setCaptchaQuestion(generateCaptcha())
     } finally {
       setIsSubmitting(false)
+      // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
@@ -159,22 +149,6 @@ export default function Contact() {
                 />
               </div>
 
-              <div>
-                <label htmlFor="captcha" className="block text-sm font-medium mb-1">
-                  Verify you're human: {captchaQuestion.question}
-                </label>
-                <input
-                  type="text"
-                  id="captcha"
-                  name="captcha"
-                  value={formData.captcha}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  placeholder="Enter the answer"
-                />
-              </div>
-
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -183,6 +157,12 @@ export default function Contact() {
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <Send className="h-4 w-4" />
               </button>
+
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                size="invisible"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+              />
 
               {submitStatus === "success" && (
                 <p className="text-green-600 text-sm">Your message has been sent successfully!</p>
