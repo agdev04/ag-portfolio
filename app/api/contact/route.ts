@@ -3,25 +3,10 @@ import nodemailer from "nodemailer"
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message, recaptchaToken } = await req.json()
-
-    // Verify reCAPTCHA token
-    const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`
-    })
-
-    const recaptchaData = await recaptchaResponse.json()
-    if (!recaptchaData.success) {
-      return NextResponse.json(
-        { error: "reCAPTCHA verification failed" },
-        { status: 400 }
-      )
-    }
+    const { name, email, message } = await req.json()
 
     // Validate required fields
-    if (!name || !email || !message || !recaptchaToken) {
+    if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Please fill in all required fields" },
         { status: 400 }
@@ -30,10 +15,10 @@ export async function POST(req: Request) {
 
     // Create transporter
     const transporter = nodemailer.createTransport({
-        service: 'gmail', // You can use other services like 'hotmail', 'yahoo', etc.
+        service: 'gmail',
         auth: {
             user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASSWORD // For Gmail, use App Password if 2FA is enabled
+            pass: process.env.SMTP_PASSWORD
         }
     })
 
