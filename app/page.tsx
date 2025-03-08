@@ -1,13 +1,15 @@
+import dynamic from 'next/dynamic'
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import About from "@/components/about"
-import Skills from "@/components/skills"
-import Projects from "@/components/projects"
-import Experience from "@/components/experience"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
-import ScrollToSection from "@/components/scroll-to-section"
-import Resume from "@/components/resume"
+
+const About = dynamic(() => import("@/components/about"), { ssr: true })
+const Skills = dynamic(() => import("@/components/skills"), { ssr: true })
+const Projects = dynamic(() => import("@/components/projects"), { ssr: true })
+const Experience = dynamic(() => import("@/components/experience"), { ssr: true })
+const Contact = dynamic(() => import("@/components/contact"), { ssr: true })
+const Footer = dynamic(() => import("@/components/footer"), { ssr: true })
+const ScrollToSection = dynamic(() => import("@/components/scroll-to-section"), { ssr: true })
+const Resume = dynamic(() => import("@/components/resume"), { ssr: true })
 
 export default function Home() {
   return (

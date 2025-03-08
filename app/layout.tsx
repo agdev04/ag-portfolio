@@ -10,9 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://agnieve.com'),
   icons: {
-    icon: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
-    shortcut: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
-    apple: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
+    icon: 'https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif',
+    shortcut: 'https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif',
+    apple: 'https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif',
   },
   title: "AG Nieve | Full Stack Developer | PHP, JavaScript, Rust & Go Expert",
   description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     siteName: "AG Nieve Portfolio",
     images: [
       {
-        url: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fimage_fx_%20(30).jpg?alt=media&token=3df87887-cd90-4e4c-8861-bf6280cf7d24",
+        url: "https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif",
         width: 1200,
         height: 630,
         alt: "AG Nieve - Full Stack Developer"
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AG Nieve | Full Stack Developer",
     description: "Full Stack Developer specializing in PHP, JavaScript, Rust, and Go",
-    images: ["https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fimage_fx_%20(30).jpg?alt=media&token=3df87887-cd90-4e4c-8861-bf6280cf7d24"],
+    images: ["https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif"],
     creator: "@agnieve"
   },
   alternates: {

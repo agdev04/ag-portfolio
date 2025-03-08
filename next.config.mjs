@@ -14,8 +14,32 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    domains: ['res.cloudinary.com'],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
   },
+  headers: async () => [
+    {
+      source: '/:all*(svg|jpg|png|avif|webp)',
+      locale: false,
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, must-revalidate'
+        }
+      ]
+    },
+    {
+      source: '/_next/image/:all*',
+      locale: false,
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=86400, must-revalidate'
+        }
+      ]
+    }
+  ],
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
