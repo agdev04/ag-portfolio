@@ -121,7 +121,7 @@ export default function Resume() {
             heading: HeadingLevel.HEADING_3
           }),
           new Paragraph({
-            text: "ExploreMalaysia.com.my | Digos City, Philippines | 2024 – 2025"
+            text: "ExploreMalaysia.com.my | Remote | 2024 – 2025"
           }),
           new Paragraph({
             children: [new TextRun("Architected a travel platform integrating WordPress, MySQL, Nest.js, and Flutter, delivering seamless web and mobile experiences.")],
@@ -185,7 +185,7 @@ export default function Resume() {
             spacing: { before: 400 }
           }),
           new Paragraph({
-            text: "XTendly Philippines | Digos City, Philippines | 2020 – 2022"
+            text: "XTendly Philippines | Remote | 2020 – 2022"
           }),
           new Paragraph({
             children: [new TextRun("Revamped local government websites with WordPress, improving public access to critical services.")],
@@ -293,7 +293,7 @@ export default function Resume() {
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold">FULL STACK DEVELOPER</h4>
-                    <p className="text-muted-foreground mb-2">ExploreMalaysia.com.my | Digos City, Philippines | 2024 – 2025</p>
+                    <p className="text-muted-foreground mb-2">ExploreMalaysia.com.my | Remote | 2024 – 2025</p>
                     <ul className="list-disc list-inside text-muted-foreground">
                       <li>Architected a travel platform integrating WordPress, MySQL, Nest.js, and Flutter, delivering seamless web and mobile experiences.</li>
                       <li>Developed cross-platform mobile applications using React Native, Expo, and Flutter, enhancing user engagement for travel services.</li>
@@ -319,7 +319,7 @@ export default function Resume() {
 
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold">FULL STACK DEVELOPER</h4>
-                    <p className="text-muted-foreground mb-2">XTendly Philippines | Digos City, Philippines | 2020 – 2022</p>
+                    <p className="text-muted-foreground mb-2">XTendly Philippines | Remote | 2020 – 2022</p>
                     <ul className="list-disc list-inside text-muted-foreground">
                       <li>Revamped local government websites with WordPress, improving public access to critical services.</li>
                       <li>Created "JOMS" (Job Order Management System) using CodeIgniter, automating workflows and reducing processing time.</li>
