@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from "docx";
@@ -8,9 +9,20 @@ import { FaFilePdf } from "react-icons/fa6";
 import { BsFiletypeDocx } from "react-icons/bs";
 
 export default function Resume() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const generatePDF = () => {
+    if (!isClient) return;
+
     const content = document.createElement('div');
-    content.innerHTML = document.querySelector('#resume-content')?.innerHTML || '';
+    const resumeContent = document.querySelector('#resume-content');
+    if (!resumeContent) return;
+
+    content.innerHTML = resumeContent.innerHTML;
 
     // Apply print styles
     content.style.padding = '40px';

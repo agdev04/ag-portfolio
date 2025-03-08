@@ -30,6 +30,7 @@ export default function About() {
               src="https://res.cloudinary.com/diogkehjt/image/upload/v1741451209/image_fx__30_mrdgrm.webp"
               alt="AG Nieve"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
               priority
               quality={90}
