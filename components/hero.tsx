@@ -4,6 +4,7 @@ import { Metadata } from "next"
 import { ArrowDown } from "lucide-react"
 import Link from "next/link"
 import { useTypingEffect } from "@/hooks/use-typing-effect"
+import Resume from "./resume"
 
 
 export const metadata: Metadata = {
@@ -52,13 +53,7 @@ export default function Hero() {
             >
               Get in Touch
             </Link>
-            <Link
-              href="#projects"
-              className="rounded-md bg-secondary px-4 py-2.5 text-sm font-semibold text-secondary-foreground shadow-sm hover:bg-secondary/80"
-              aria-label="View AG Nieve's Projects"
-            >
-              View My Work
-            </Link>
+            <Resume />
           </div>
         </div>
       </div>

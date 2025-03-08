@@ -7,6 +7,7 @@ import Experience from "@/components/experience"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import ScrollToSection from "@/components/scroll-to-section"
+import Resume from "@/components/resume"
 
 export default function Home() {
   return (
