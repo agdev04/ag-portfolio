@@ -79,7 +79,7 @@ export default function Contact() {
               <div className="flex items-center gap-4">
                 <Linkedin className="h-5 w-5 text-primary" />
                 <Link
-                  href="https://linkedin.com/in/agnieve"
+                  href="https://ph.linkedin.com/in/ag-nieve-a9105627b?trk=org-employees"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"

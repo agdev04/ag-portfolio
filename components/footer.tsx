@@ -25,7 +25,7 @@ export default function Footer() {
               <Mail className="h-5 w-5" />
             </Link>
             <Link
-              href="https://github.com/agnieve"
+              href="https://github.com/agnieve04"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -34,7 +34,7 @@ export default function Footer() {
               <Github className="h-5 w-5" />
             </Link>
             <Link
-              href="https://linkedin.com/in/agnieve"
+              href="https://ph.linkedin.com/in/ag-nieve-a9105627b?trk=org-employees"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

@@ -92,7 +92,7 @@ export default function RootLayout({
               "name": "AG Nieve",
               "url": "https://agnieve.com",
               "sameAs": [
-                "https://github.com/agnieve",
+                "https://github.com/agdev04",
                 "https://ph.linkedin.com/in/ag-nieve-a9105627b?trk=org-employees"
               ],
               "jobTitle": "Full Stack Developer",
