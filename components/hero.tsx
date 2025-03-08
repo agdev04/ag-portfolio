@@ -39,7 +39,7 @@ export default function Hero() {
             </span>
           </h1>
           <p 
-            className="mt-6 max-w-lg mx-auto text-lg text-muted-foreground"
+            className="mt-6 max-w-lg mx-auto lg:text-lg text-base text-muted-foreground"
             itemProp="description"
           >
             Crafting robust and elegant solutions with PHP, JavaScript, Rust, and Go. With 7 years of experience

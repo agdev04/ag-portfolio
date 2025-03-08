@@ -7,7 +7,7 @@ const projects = [
     title: "Olympus Insights.io",
     description:
       "Olympus Insights.io is an educational web and mobile platform for learning while earning cryptocurrency. ",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Foli.png?alt=media&token=4500cf53-3384-402b-a5f9-cb8d9da519bd",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741451016/oli_zq7nup.webp",
     technologies: ["React.js", "Nest.js", "PostgresQL", "React Native", "Rust"],
     liveUrl: "https://olympusinsights.io/",
     githubUrl: "https://github.com/agdev04/castle-lms-api",
@@ -16,7 +16,7 @@ const projects = [
     title: "Keen2Work",
     description:
       "Keen2Work is a web application that helps job seekers find jobs that match their skills and experience. ",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fk2w.png?alt=media&token=9cdfa7e6-57b1-4ca1-8f3d-6b3c9fa445bd",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741451000/k2w_vsvicl.webp",
     technologies: ["React.js", "Nest.js", "PostgresQL", "React Native"],
     liveUrl: "https://www.k2w.com.au/",
     githubUrl: "https://github.com/agdev04/castle-keen2work-api",
@@ -25,7 +25,7 @@ const projects = [
     title: "WhatKey.io",
     description:
       "A website that helps users find the best keyboard for their needs. Using AI to analyze user input and provide recommendations.",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fwhatkey.png?alt=media&token=a3bb11fb-4e7e-4651-8bf8-1bc97f8dcb3a",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741451016/whatkey_gghpsq.webp",
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "React Native", "Tensorflow.js"],
     liveUrl: "https://whatkey.io/",
     githubUrl: "https://github.com/agdev04/castle-whatkey-api.git",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "GPA Rebates",
     description: "A platform for managing and processing GPA rebates for customers with appliances.",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fgpa_rebates.png?alt=media&token=4e4e7600-9483-4c7b-abc7-aeac8ea37275",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741450999/gpa_rebates_b3zwvn.webp",
     technologies: ["JavaScript", "React", "Node.js", "Socket.io", "MongoDB"],
     liveUrl: "https://gparebates.com/",
     githubUrl: "https://github.com/agnieve70/gpa-dsm",
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "XFFiliate",
     description: "An affiliate marketing platform for e-commerce businesses.",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fxffiliate.png?alt=media&token=82223293-2834-4a42-8db0-1c25f4c7ae56",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741451016/xffiliate_csbkfv.webp",
     technologies: ["PHP", "Laravel", "React.js", "Node.js"],
     liveUrl: "https://xffiliate.prosperna.com/",
     githubUrl: "#",
@@ -50,7 +50,7 @@ const projects = [
     title: "Digos City Website",
     description:
       "Website for the city of Digos, Philippines. Built with PHP, Wordpress and Bootstrap.",
-    image: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fdigos_city.png?alt=media&token=288aa4b0-f6b9-4cf5-99df-9a4226e3523b",
+    image: "https://res.cloudinary.com/diogkehjt/image/upload/v1741450318/digos_city_qyh9lg.webp",
     technologies: ["PHP", "Wordpress", "Boostrap", "MySql"],
     liveUrl: "https://www.digoscity.gov.ph/",
     githubUrl: "#",

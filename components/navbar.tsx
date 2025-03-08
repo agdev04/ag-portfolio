@@ -36,7 +36,7 @@ export default function Navbar() {
             <Link href="#home" className="text-xl font-bold">
               <Image
                 alt="AG Nieve Logo"
-                src="https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24"
+                src="https://res.cloudinary.com/diogkehjt/image/upload/v1741449742/AG_Logo-removebg-preview_hpolqy.avif"
                 width={65}
                 height={65}
                 priority

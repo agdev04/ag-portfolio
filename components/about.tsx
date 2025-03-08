@@ -8,17 +8,17 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-lg mb-4">
+            <p className="lg:text-lg text-base mb-4">
               Hello! I'm <span className="highlight font-medium">AG Nieve</span>, a passionate Full Stack Developer with 7 years of
               experience building web applications and services. I specialize in PHP, JavaScript, Rust, and Go, creating
               efficient, scalable, and maintainable solutions for complex problems.
             </p>
-            <p className="text-lg mb-4">
+            <p className="lg:text-lg text-base mb-4">
               My journey in software development began with a fascination for how technology can solve real-world
               challenges. This curiosity has driven me to continuously expand my skills and stay at the forefront of
               industry trends.
             </p>
-            <p className="text-lg">
+            <p className="lg:text-lg text-base">
               I thrive in collaborative environments where I can contribute my technical expertise while learning from
               others. Whether it's architecting robust backend systems or crafting intuitive user interfaces, I'm
               committed to delivering high-quality code that makes a difference.
@@ -27,7 +27,7 @@ export default function About() {
 
           <div className="rounded-3xl relative h-80 md:h-96 overflow-hidden shadow-xl">
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fimage_fx_%20(30).jpg?alt=media&token=3df87887-cd90-4e4c-8861-bf6280cf7d24"
+              src="https://res.cloudinary.com/diogkehjt/image/upload/v1741451209/image_fx__30_mrdgrm.webp"
               alt="AG Nieve"
               fill
               className="object-cover"
