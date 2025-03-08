@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://agnieve.com'),
+  icons: {
+    icon: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
+    shortcut: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
+    apple: 'https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24',
+  },
   title: "AG Nieve | Full Stack Developer | PHP, JavaScript, Rust & Go Expert",
   description:
     "Experienced Full Stack Developer with 7+ years specializing in PHP, JavaScript, Rust, and Go. Expert in building scalable web applications, microservices, and high-performance systems. View my portfolio and projects.",

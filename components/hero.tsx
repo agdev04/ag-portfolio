@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Hero() {
   return (
     <section 
-      id="hero" 
+      id="home" 
       aria-label="Introduction"
       className="relative h-screen flex items-center justify-center bg-gradient-to-b from-background to-secondary/20"
     >
@@ -57,7 +57,7 @@ export default function Hero() {
         <Link 
           href="#about" 
           aria-label="Scroll down to About section"
-          className="focus:outline-none focus:ring-2 focus:ring-primary rounded-full p-2"
+          className="rounded-full p-2"
         >
           <ArrowDown className="h-6 w-6 text-primary" aria-hidden="true" />
         </Link>
