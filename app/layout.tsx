@@ -49,32 +49,25 @@ export const metadata: Metadata = {
     siteName: "AG Nieve Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fimage_fx_%20(30).jpg?alt=media&token=3df87887-cd90-4e4c-8861-bf6280cf7d24",
         width: 1200,
         height: 630,
-        alt: "AG Nieve - Full Stack Developer Portfolio",
-      },
+        alt: "AG Nieve - Full Stack Developer"
+      }
     ],
     locale: "en_US",
     type: "website",
-    countryName: "Philippines",
-    emails: ["dev@agnieve.com"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AG Nieve | Full Stack Developer | PHP, JavaScript, Rust & Go Expert",
-    description: "Experienced Full Stack Developer with 7+ years specializing in PHP, JavaScript, Rust, and Go. Expert in building scalable web applications, microservices, and high-performance systems.",
-    images: ["https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24"],
-    creator: "@agnieve",
-    site: "@agnieve",
+    title: "AG Nieve | Full Stack Developer",
+    description: "Full Stack Developer specializing in PHP, JavaScript, Rust, and Go",
+    images: ["https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2Fimage_fx_%20(30).jpg?alt=media&token=3df87887-cd90-4e4c-8861-bf6280cf7d24"],
+    creator: "@agnieve"
   },
   alternates: {
-    canonical: "https://agnieve.com",
-  },
-  generator: "Next.js",
-  applicationName: "AG Nieve Portfolio",
-  referrer: "origin-when-cross-origin",
-  category: "technology"
+    canonical: "https://agnieve.com"
+  }
 }
 
 export default function RootLayout({
@@ -83,11 +76,46 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/calm-point.firebasestorage.app/o/portfolio%2FAG_Logo-removebg-preview.png?alt=media&token=48e87436-a87f-4329-8133-e2af0f10ab24" />
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "AG Nieve",
+              "url": "https://agnieve.com",
+              "sameAs": [
+                "https://github.com/agnieve",
+                "https://ph.linkedin.com/in/ag-nieve-a9105627b?trk=org-employees"
+              ],
+              "jobTitle": "Full Stack Developer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Freelance"
+              },
+              "description": "Experienced Full Stack Developer with 7+ years specializing in PHP, JavaScript, Rust, and Go",
+              "knowsAbout": [
+                "Web Development",
+                "PHP",
+                "JavaScript",
+                "Rust",
+                "Go",
+                "System Architecture",
+                "Microservices"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           {children}
           <Analytics />
         </ThemeProvider>
