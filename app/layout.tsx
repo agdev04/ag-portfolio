@@ -83,6 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/ag_logo.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
